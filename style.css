@@ -1,0 +1,213 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    background-color: #f2f2f2; 
+}
+
+/* Header bar */
+.header {
+    background-color: maroon;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Title */
+.header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Controls (Add, Search, Filter) */
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Inputs and selects */
+.controls input[type=text], 
+.controls select {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+    min-width: 150px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.controls .btn {
+    background-color: silver;
+    color: maroon;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 16px;
+}
+.controls .btn:hover {
+    background-color: #ddd;
+}
+
+/* Table */
+table { 
+    border-collapse: collapse; 
+    width: 95%; 
+    margin: 20px auto; 
+    background-color: white; 
+}
+th { 
+    background-color: maroon; 
+    color: white; 
+    padding: 10px; 
+    font-size: 16px;
+}
+td { 
+    padding: 8px; 
+    border: 1px solid #ddd; 
+    font-size: 15px;
+}
+tr:nth-child(even) { background-color: #f9f9f9; }
+
+/* Form container */
+.form-container {
+    margin: 30px auto;
+    background: white;
+    border: 2px solid maroon;
+    border-radius: 8px;
+    width: 90%; /* flexible width */
+    max-width: 500px;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Top bar */
+.form-header {
+    background-color: maroon;
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Form body */
+.form-body {
+    padding: 20px;
+    color: black;
+}
+
+/* Input fields */
+.form-body input, 
+.form-body select {
+    margin: 8px 0;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: 16px;
+}
+
+/* Buttons container */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Green Add/Update button */
+.btn-green {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+.btn-green:hover {
+    background-color: #218838;
+}
+
+/* Red Cancel button */
+.btn-red {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn-red:hover {
+    background-color: #a71d2a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .header h2 {
+        font-size: 20px;
+    }
+    .controls input[type=text], 
+    .controls select, 
+    .controls .btn {
+        font-size: 15px;
+    }
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .controls {
+        flex-direction: column;
+        width: 100%;
+    }
+    .controls input[type=text], 
+    .controls select, 
+    .controls .btn {
+        width: 100%;
+        font-size: 14px;
+    }
+    .header h2 {
+        font-size: 18px;
+    }
+    table {
+        font-size: 13px;
+    }
+    th, td {
+        font-size: 13px;
+        padding: 5px;
+    }
+    .form-container {
+        width: 95%;
+    }
+    .form-body input, 
+    .form-body select {
+        font-size: 14px;
+    }
+    .btn-green, .btn-red {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
