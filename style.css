@@ -4,7 +4,6 @@ body {
     background-color: #f2f2f2; 
 }
 
-/* Header bar */
 .header {
     background-color: maroon;
     color: white;
@@ -15,13 +14,11 @@ body {
     flex-wrap: wrap;
 }
 
-/* Title */
 .header h2 {
     margin: 0;
     font-size: 22px;
 }
 
-/* Controls (Add, Search, Filter) */
 .controls {
     display: flex;
     gap: 10px;
@@ -29,7 +26,6 @@ body {
     align-items: center;
 }
 
-/* Inputs and selects */
 .controls input[type=text], 
 .controls select {
     padding: 6px;
@@ -39,7 +35,6 @@ body {
     font-size: 16px;
 }
 
-/* Buttons */
 .controls .btn {
     background-color: silver;
     color: maroon;
@@ -54,7 +49,6 @@ body {
     background-color: #ddd;
 }
 
-/* Table */
 table { 
     border-collapse: collapse; 
     width: 95%; 
@@ -74,19 +68,17 @@ td {
 }
 tr:nth-child(even) { background-color: #f9f9f9; }
 
-/* Form container */
 .form-container {
     margin: 30px auto;
     background: white;
     border: 2px solid maroon;
     border-radius: 8px;
-    width: 90%; /* flexible width */
+    width: 90%;
     max-width: 500px;
     text-align: left;
     overflow: hidden;
 }
 
-/* Top bar */
 .form-header {
     background-color: maroon;
     color: white;
@@ -95,13 +87,11 @@ tr:nth-child(even) { background-color: #f9f9f9; }
     font-weight: bold;
 }
 
-/* Form body */
 .form-body {
     padding: 20px;
     color: black;
 }
 
-/* Input fields */
 .form-body input, 
 .form-body select {
     margin: 8px 0;
@@ -113,14 +103,12 @@ tr:nth-child(even) { background-color: #f9f9f9; }
     font-size: 16px;
 }
 
-/* Buttons container */
 .form-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
 }
 
-/* Green Add/Update button */
 .btn-green {
     background-color: #28a745;
     color: white;
@@ -137,7 +125,6 @@ tr:nth-child(even) { background-color: #f9f9f9; }
     background-color: #218838;
 }
 
-/* Red Cancel button */
 .btn-red {
     background-color: #dc3545;
     color: white;
@@ -156,7 +143,6 @@ tr:nth-child(even) { background-color: #f9f9f9; }
     background-color: #a71d2a;
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
     .header h2 {
         font-size: 20px;
