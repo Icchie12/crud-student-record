@@ -63,26 +63,23 @@ if (isset($_POST['submit'])) {
     $address = $_POST['address'];
     $contact = $_POST['contact'];
 
-    // Check duplicate ID
     $check_id = mysqli_query($conn, "SELECT * FROM students WHERE student_id='$id'");
     if (mysqli_num_rows($check_id) > 0) {
         echo "<script>alert('Student ID already exists!'); window.location='add.php';</script>";
         exit;
     }
 
-    // Check duplicate email
     $check_email = mysqli_query($conn, "SELECT * FROM students WHERE email='$email'");
     if (mysqli_num_rows($check_email) > 0) {
         echo "<script>alert('Email already exists!'); window.location='add.php';</script>";
         exit;
     }
 
-    // Insert record
     $insert = mysqli_query($conn, "INSERT INTO students (student_id, name, email, course, year_level, address, contact) 
                                    VALUES ('$id','$name','$email','$course','$year','$address','$contact')");
 
     if ($insert) {
-        header("Location: index.php"); // balik sa dashboard
+        header("Location: index.php"); 
         exit;
     } else {
         echo "<script>alert('Error saving record!');</script>";
