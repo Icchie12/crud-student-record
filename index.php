@@ -6,18 +6,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header bar -->
     <div class="header">
         <h2>CCIS Student Record</h2>
         <div class="controls">
             <a class="btn" href="add.php">Add Student</a>
             <form method="GET" style="display:flex; gap:10px; flex-wrap:wrap;">
                 
-                <!-- Search -->
                 <input type="text" name="search" placeholder="Search name/email"
                        value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
 
-                <!-- Course Filter -->
                 <select name="course">
                     <option value="" <?php if(empty($_GET['course'])) echo "selected"; ?>>All Courses</option>
                     <option value="Bachelor of Science in Information Technology" <?php if(isset($_GET['course']) && $_GET['course']=="Bachelor of Science in Information Technology") echo "selected"; ?>>Bachelor of Science in Information Technology</option>
@@ -26,7 +23,6 @@
                     <option value="Bachelor of Science in Computer Engineering" <?php if(isset($_GET['course']) && $_GET['course']=="Bachelor of Science in Computer Engineering") echo "selected"; ?>>Bachelor of Science in Computer Engineering</option>
                 </select>
 
-                <!-- Year Filter -->
                 <select name="year">
                     <option value="" <?php if(empty($_GET['year'])) echo "selected"; ?>>All Years</option>
                     <option value="1" <?php if(isset($_GET['year']) && $_GET['year']=="1") echo "selected"; ?>>1st Year</option>
@@ -36,14 +32,12 @@
                     <option value="Irregular" <?php if(isset($_GET['year']) && $_GET['year']=="Irregular") echo "selected"; ?>>Irregular</option>
                 </select>
 
-                <!-- Buttons -->
                 <input type="submit" class="btn" value="Filter">
                 <a href="index.php" class="btn">Reset</a>
             </form>
         </div>
     </div>
 
-    <!-- Table -->
     <div class="table-wrapper">
         <table>
             <tr>
