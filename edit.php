@@ -63,20 +63,18 @@ if (isset($_POST['update'])) {
     $address = $_POST['address'];
     $contact = $_POST['contact'];
 
-    // Check duplicate email (except current student)
     $check_email = mysqli_query($conn, "SELECT * FROM students WHERE email='$email' AND student_id!='$id'");
     if (mysqli_num_rows($check_email) > 0) {
         echo "<script>alert('Email already exists!'); window.location='edit.php?id=$id';</script>";
         exit;
     }
 
-    // Update record
     $update = mysqli_query($conn, "UPDATE students 
                                    SET name='$name', email='$email', course='$course', year_level='$year', address='$address', contact='$contact' 
                                    WHERE student_id='$id'");
 
     if ($update) {
-        header("Location: index.php"); // balik sa dashboard
+        header("Location: index.php");
         exit;
     } else {
         echo "<script>alert('Error updating record!');</script>";
